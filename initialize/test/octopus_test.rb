@@ -1,8 +1,8 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/eel'
-require './lib/narwhal'
-require './lib/octopus'
+require '../lib/eel'
+require '../lib/narwhal'
+require '../lib/octopus'
 
 class OctopusTest < Minitest::Test
   def test_it_exists

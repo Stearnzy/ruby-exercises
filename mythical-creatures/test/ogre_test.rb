@@ -95,7 +95,7 @@ class OgreTest < Minitest::Test
     skip
     ogre = Ogre.new('Brak')
     human = Human.new
-    
+
     6.times do
       ogre.encounter(human)
     end

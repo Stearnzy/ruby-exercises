@@ -1,9 +1,10 @@
 class Car
 
-  attr_reader: color
+  attr_accessor :color
 
   def initialize
-    @ileage = 0
+    @mileage = 0
+    @color = color
     @wheel_count = 4
   end
 
@@ -11,8 +12,8 @@ class Car
     puts "BEEEEP"
   end
 
-  def drive()
-    @milage += distance
+  def drive(distance)
+    @mileage += distance
     puts "I'm driving #{distance} miles!"
   end
 
@@ -38,4 +39,5 @@ end
 my_car = Car.new
 my_car.drive(6)
 my_car.color = "purple"
+my_car.start
 my_car.start

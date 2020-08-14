@@ -13,13 +13,13 @@ class BonusQuestionsTest < Minitest::Test
     product = 1
     numbers = [1, 2, 3, 4, 5, 6, 7]
     numbers.each do |number|
-      # write code here
+      product = product * number
     end
     assert_equal 5040, product
   end
 
   def test_first_roving_gnome
-    skip
+    # skip
     gnome1 = Gnome.new('forest')
     gnome2 = Gnome.new('roving')
     gnome3 = Gnome.new('snorkeling')
@@ -28,16 +28,20 @@ class BonusQuestionsTest < Minitest::Test
 
     gnomes = [gnome1, gnome2, gnome3, gnome4, gnome5]
 
-    # write code here
+    found = gnomes.find do |gnome|
+      gnome == gnome2
+    end
 
     assert_equal gnome2, found
   end
 
   def test_sum_of_factorials
-    skip
+    # skip
     sum_of_factorials = 0
     numbers = [1, 2, 3, 4, 5]
-    # write code here
+    sum_of_factorials = numbers.reduce(0) do |sum, number|
+      
+    end
     assert_equal 153, sum_of_factorials
   end
 

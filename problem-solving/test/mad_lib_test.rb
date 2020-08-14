@@ -1,5 +1,5 @@
 require_relative "test_helper"
-require "./lib/mad_lib"
+require "../lib/mad_lib"
 
 class MadLibTest < Minitest::Test
 

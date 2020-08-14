@@ -11,7 +11,7 @@ class CupcakesTest < Minitest::Test
   end
 
   def test_sweetest_with_only_one_left
-    skip
+    # skip
     cupcakes = Cupcakes.new
     cupcakes << Cupcake.new("Carrot", 5) # 5 grams of sugar
     assert_equal "Carrot", cupcakes.sweetest.flavor

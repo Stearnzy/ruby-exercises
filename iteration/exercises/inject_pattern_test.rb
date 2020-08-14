@@ -38,12 +38,13 @@ class InjectPatternTest < Minitest::Test
 
     product = 1
     numbers.each do |number|
-      # Your Code Here
+      product *= number
     end
     assert_equal 210, product
   end
 
   def test_4
+    # skip
     scrabble_score = {
       letter_total: 23,
       word_muliplier: 3,
@@ -54,19 +55,22 @@ class InjectPatternTest < Minitest::Test
 
     product = 1
     scrabble_score.each do |(key, value)|
-      # Your Code Here
+      product *= value
     end
     assert_equal 138, product
   end
 
   def test_5
+    # skip
     airlines = ["Southwest", "Delta", "United", "Frontier"]
     # Iterate over the airlines array defined above to
     # create a hash with the name of the airline as the
     # key and the length of the name as the value
 
     number_of_letters = {}
-    # Your Code Here
+    airlines.each do |airline|
+      number_of_letters[airline] = airline.length.to_i
+    end
 
     expected = {
       "Southwest" => 9,
@@ -78,6 +82,7 @@ class InjectPatternTest < Minitest::Test
   end
 
   def test_6
+    # skip
     topping_calories = {
       pepperoni: 430,
       sausage: 400,
@@ -89,23 +94,30 @@ class InjectPatternTest < Minitest::Test
     # to create an array of all the toppings
 
     toppings = []
-    # Your Code Here
+    topping_calories.each do |topping, value|
+      toppings << topping.to_s
+    end
 
     assert_equal ["pepperoni", "sausage", "olives", "peppers", "onions"], toppings
   end
 
   def test_7
+    # skip
     elements = [["a", 1], ["b", 9], ["c", 21]]
     # Iterate over the elements array defined above
     # to find the sum of all the integers
 
-    # Your Code Here
+    sum_of_second_values = 0
+    elements.each do |element|
+      sum_of_second_values += element.last
+    end
 
     assert_equal 31, sum_of_second_values
 
   end
 
   def test_8
+    # skip
     toppings = {
       pepperoni: {
         calories: 430,
@@ -132,12 +144,16 @@ class InjectPatternTest < Minitest::Test
     # total calories. You will need to multiply each topping's
     # calorie count by the quantity
 
-    # Your Code Here
+    total_calories = 0
+    toppings.each do |topping|
+      total_calories += topping.last.values.first * topping.last.values.last
+    end
 
     assert_equal 6950, total_calories
   end
 
   def test_9
+    # skip
     grades = {
       quizzes: [8, 5, 3, 6, 5],
       tests: [23, 21, 24],
@@ -149,12 +165,16 @@ class InjectPatternTest < Minitest::Test
     # calculated by averaging each category together and
     # summing all of the averages
 
-    # Your code goes here
+    final_grade = 0
+    grades.each do |assignment, grade|
+      final_grade += (grade.sum / grade.count.to_f)
+    end
 
     assert_equal 85.40, final_grade
   end
 
   def test_10
+    # skip
     menu = {
       empanadas: {
         flavors: ["chicken", "potato", "steak", "veggie"],
@@ -173,7 +193,9 @@ class InjectPatternTest < Minitest::Test
     # Iterate over the menu hash above to create a printable
     # version of the menu
 
-    # Your Code Here
+    printable_menu = "Menu:\n"\
+    menu.each do |item|
+      printable_menu << "-"
 
     expected =  "Menu:\n"\
                 "- chicken, potato, steak, and veggie empanadas (non gluten free)\n"\

@@ -11,7 +11,7 @@ class CatalogueTest < Minitest::Test
   end
 
   def test_cheapest_of_one
-    skip
+    # skip
     catalogue = Catalogue.new
     catalogue << Product.new("scissors", 8)
     assert_equal "scissors", catalogue.cheapest
